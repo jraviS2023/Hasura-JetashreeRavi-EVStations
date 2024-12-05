@@ -1,0 +1,146 @@
+kind: DataConnectorLink
+version: v1
+definition:
+  name: typescript
+  url:
+    readWriteUrls:
+      read:
+        valueFromEnv: APP_TYPESCRIPT_READ_URL
+      write:
+        valueFromEnv: APP_TYPESCRIPT_WRITE_URL
+  headers:
+    Authorization:
+      valueFromEnv: APP_TYPESCRIPT_AUTHORIZATION_HEADER
+  schema:
+    version: v0.1
+    schema:
+      scalar_types:
+        String:
+          representation:
+            type: string
+          aggregate_functions: {}
+          comparison_operators:
+            _eq:
+              type: equal
+      object_types:
+        EVChargingResponse:
+          fields:
+            stations:
+              type:
+                type: nullable
+                underlying_type:
+                  type: array
+                  element_type:
+                    type: named
+                    name: EVChargingStation
+            totalResults:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: number
+        EVChargingStation:
+          fields:
+            stationName:
+              type:
+                type: named
+                name: String
+            address:
+              type:
+                type: named
+                name: String
+            city:
+              type:
+                type: named
+                name: String
+            state:
+              type:
+                type: named
+                name: String
+            zip:
+              type:
+                type: named
+                name: String
+            fuelType:
+              type:
+                type: named
+                name: String
+            latitude:
+              type:
+                type: named
+                name: number
+            longitude:
+              type:
+                type: named
+                name: number
+            evNetwork:
+              type:
+                type: named
+                name: String
+            connectors:
+              type:
+                type: array
+                element_type:
+                  type: named
+                  name: String
+            evDcFastNum:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: number
+            evLevel1EvseNum:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: number
+            evLevel2EvseNum:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: number
+            evPricing:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+            evWorkplaceCharging:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: boolean
+      collections: []
+      functions:
+        - name: getEVChargingStations
+          arguments:
+            latitude:
+              type:
+                type: named
+                name: String
+            longitude:
+              type:
+                type: named
+                name: String
+            radius:
+              type:
+                type: named
+                name: number
+            limit:
+              type:
+                type: named
+                name: number
+          result_type:
+            type: named
+            name: EVChargingResponse
+      procedures: []
+    capabilities:
+      version: 0.1.6
+      capabilities:
+        query:
+          variables: {}
+          nested_fields: {}
+        mutation: {}

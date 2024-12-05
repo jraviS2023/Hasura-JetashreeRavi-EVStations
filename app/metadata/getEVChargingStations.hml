@@ -1,0 +1,128 @@
+---
+kind: ObjectType
+version: v1
+definition:
+  name: EVChargingStation
+  fields:
+    - name: stationName
+      type: String!
+    - name: address
+      type: String!
+    - name: city
+      type: String!
+    - name: state
+      type: String!
+    - name: zip
+      type: String!
+    - name: fuelType
+      type: String!
+    - name: latitude
+      type: Float!
+    - name: longitude
+      type: Float!
+    - name: evNetwork
+      type: String
+    - name: connectors
+      type: "[String!]"
+    - name: evDcFastNum
+      type: Int
+    - name: evLevel1EvseNum
+      type: Int
+    - name: evLevel2EvseNum
+      type: Int
+    - name: evPricing
+      type: String
+    - name: evWorkplaceCharging
+      type: Boolean
+  graphql:
+    typeName: EVChargingStation
+    inputTypeName: EVChargingStation_input
+  dataConnectorTypeMapping:
+    - dataConnectorName: typescript
+      dataConnectorObjectType: EVChargingStation
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: EVChargingStation
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - stationName
+          - address
+          - city
+          - state
+          - zip
+          - fuelType
+          - latitude
+          - longitude
+          - evNetwork
+          - connectors
+          - evDcFastNum
+          - evLevel1EvseNum
+          - evLevel2EvseNum
+          - evPricing
+          - evWorkplaceCharging
+
+---
+kind: ObjectType
+version: v1
+definition:
+  name: EVChargingResponse
+  fields:
+    - name: totalResults
+      type: Int!
+    - name: stations
+      type: "[EVChargingStation!]"
+  graphql:
+    typeName: EVChargingResponse
+    inputTypeName: EVChargingResponse_input
+  dataConnectorTypeMapping:
+    - dataConnectorName: typescript
+      dataConnectorObjectType: EVChargingResponse
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: EVChargingResponse
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - totalResults
+          - stations
+
+---
+kind: Command
+version: v1
+definition:
+  name: getEVChargingStations
+  outputType: EVChargingResponse!
+  arguments:
+    - name: latitude
+      type: String!
+    - name: longitude
+      type: String!
+    - name: radius
+      type: Float!
+    - name: limit
+      type: Int!
+  source:
+    dataConnectorName: typescript
+    dataConnectorCommand:
+      function: getEVChargingStations
+  graphql:
+    rootFieldName: getEVChargingStations
+    rootFieldKind: Query
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: getEVChargingStations
+  permissions:
+    - role: admin
+      allowExecution: true
