@@ -32,6 +32,8 @@ Here’s a sneak peek at how this works:
 
 Just like that, you're armed with the information you need to get your battery back in action, no matter where you are.
 
+[Results](https://github.com/jraviS2023/Hasura-JetashreeRavi-EVStations/blob/main/la.png)
+
 ## Challenges with Implementation: The Roadblocks We Overcame
 
 Creating a seamless, real-time experience isn't as simple as flipping a switch. Here’s a look at the bumps we hit along the way:
