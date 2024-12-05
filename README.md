@@ -19,19 +19,19 @@ ddn update-cli --version v2.12.0-alpha.2
 Using http:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/Hasura-JetashreeRavi-EVStations
 ```
 
 or using ssh:
 
 ```bash
-git clone git@github.com:
+git clone git@github.com:Hasura-JetashreeRavi-EVStations
 ```
 
 ### Step 3. Set up your .env file
 
 ```bash
-cd 
+cd Hasura-JetashreeRavi-EVStations
 cp .env.example .env
 ```
 
@@ -72,11 +72,10 @@ In another terminal window, run the following command from your project's direct
 ddn console --local
 ```
 
-### Step 7. Talk to BART!
+### Step 7. Talk to NERL API!
 
 From the console, try asking a question, like:
 
 ```plaintext
-> XXX
 > XXX
 ```
