@@ -28,7 +28,7 @@ Here’s a sneak peek at how this works:
 
 ## Demo: See the Magic in Action
 
-[Watch the demo]([https://github.com/jraviS2023/Hasura-JetashreeRavi-EVStations/blob/main/hasura_demo.mp4](https://youtu.be/xEPPMKCTtxU))
+[Watch the demo](https://youtu.be/xEPPMKCTtxU)
 
 Just like that, you're armed with the information you need to get your battery back in action, no matter where you are.
 
