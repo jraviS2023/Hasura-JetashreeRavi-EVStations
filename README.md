@@ -1,11 +1,6 @@
-# Example: Realtime Chat Application on the BART API
+# Example: Realtime Chat Application on the EV Charging Stations Data through NERL API
 
-This is a simple example of exposing [PromptQL](https://promptql.hasura.io/) to real-time public data using the BART API. The BART API is a public API
-that provides real-time data on the Bay Area Rapid Transit system. This example demonstrates how to use PromptQL to
-create a real-time chat application that allows a user to talk to the BART API and get real-time information on
-departures.
-
-You can request access to a deployed version of this project [here](https://console.hasura.io/project/coherent-jennet-3826)!
+This is a simple example of exposing [PromptQL](https://promptql.hasura.io/) to real-time public data using the NREL API. The NREL API is a public API that provides real-time information on alternative fueling stations, including electric vehicle (EV) charging stations. This example demonstrates how to use PromptQL to create a real-time chat application that allows a user to interact with the NREL API and get real-time information about nearby EV charging stations.
 
 ## Getting Started
 
@@ -24,19 +19,19 @@ ddn update-cli --version v2.12.0-alpha.2
 Using http:
 
 ```bash
-git clone https://github.com/robertjdominguez/example-promptql-bart.git
+git clone https://github.com/
 ```
 
 or using ssh:
 
 ```bash
-git clone git@github.com:robertjdominguez/example-promptql-bart.git
+git clone git@github.com:
 ```
 
 ### Step 3. Set up your .env file
 
 ```bash
-cd example-promptql-bart
+cd 
 cp .env.example .env
 ```
 
@@ -82,6 +77,6 @@ ddn console --local
 From the console, try asking a question, like:
 
 ```plaintext
-> What time is the next train arriving at Embarcadero?
-> If I leave 576 Folsom St now, can I make the next train at Montgomery?
+> XXX
+> XXX
 ```
