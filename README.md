@@ -1,5 +1,7 @@
 # Example: Realtime Chat Application on the EV Charging Stations Data through NERL API
 
+## Report
+
 ## Overview
 
 ### Finding a Charging Spot Shouldn’t Be a Treasure Hunt
@@ -123,5 +125,5 @@ ddn console --local
 From the console, try asking a question, like:
 
 ```plaintext
-> XXX
+> Where are the EV charging stations near Mountain View?
 ```
