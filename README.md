@@ -2,6 +2,8 @@
 
 ## Report
 
+[Report](https://github.com/jraviS2023/Hasura-JetashreeRavi-EVStations/blob/main/hasura_report_jetashree.pdf)
+
 ## Overview
 
 ### Finding a Charging Spot Shouldn’t Be a Treasure Hunt
